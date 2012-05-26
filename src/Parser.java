@@ -99,12 +99,12 @@ public class Parser {
 		ArrayList<FormalParam> params = new ArrayList<FormalParam>();
 		if(Type()){
 			FormalParam value = FormalParam();
-			value.lineNum = lexer.lineNum;
+			value.lineNum = Lexer.lineNum;
 			params.add(value);
 			while(token.getTokenType() != Token.LP && token.getTokenType() == Token.FA){
 				match(Token.FA);
 				value = FormalParam();
-				value.lineNum = lexer.lineNum;
+				value.lineNum = Lexer.lineNum;
 				params.add(value);
 			}
 			// This condition for telling that the lexer is waiting for an FA token and not LP "missing FA"
@@ -145,7 +145,8 @@ public class Parser {
 		while(Type() || token.getLexeme().equals("if") 
 				|| token.getLexeme().equals("while")
 				|| token.getLexeme().equals("return") 
-				|| token.getTokenType() == Token.ID){
+				|| token.getTokenType() == Token.ID
+				|| token.getTokenType() == Token.LB){
 			result.add(Statement());
 		}	
 		return result;

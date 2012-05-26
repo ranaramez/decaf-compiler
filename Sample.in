@@ -7,12 +7,14 @@ class Algebra {
 		String s;
         s = "This is a useless string literal 
         ;
-		if(a == 2)
+		if(2 == 2)
 		{
-			
-				x = 2;
+			{
+				a = 2;
+			}
 			
 		}
+		return a;
 	}
 	static int fibonacci(int n1) // Find n-th Fibonacci number.
 	{
