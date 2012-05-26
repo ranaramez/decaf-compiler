@@ -1,0 +1,32 @@
+class Algebra {
+	
+	static int gcd(int a, int b, int c)
+	{
+		
+		a=1224.3;
+		String s;
+        s = "This is a useless string literal 
+        ;
+		if(a == 2)
+		{
+			
+				x = 2;
+			
+		}
+	}
+	static int fibonacci(int n1) // Find n-th Fibonacci number.
+	{
+		if ((n1 == 1) || (n1 == 2))
+			return gcd(n1, 1, 2);
+		else
+			return fibonacci(n1 - 1) + fibonacci(n1 - 2);
+	}
+	
+	static int average(float n1, float n2, float n3)
+	{
+		float sum;
+		sum = n1 + n2 + n3;
+		return sum;
+	}
+	
+}
